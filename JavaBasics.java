@@ -42,6 +42,8 @@ public class JavaBasics{
         System.out.println("Enter 2nd number :-  ");
         int y = sc.nextInt();
 
+        sc.close();
+
         int sum = x + y;
 
         System.out.println("Addition is ");
