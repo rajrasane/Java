@@ -2,7 +2,7 @@ import java.util.* ;
 
 public class JavaBasics{
     public static void main(String[] args) {
-        
+        primeornot();
     }
 
     // Showing output in JAVA
@@ -11,6 +11,7 @@ public class JavaBasics{
     }
 
     // Variables and Datatype
+    @SuppressWarnings("unused")
     public static void Variable_Understanding(){
         int a = 10;
         String name = "Raj" ;
@@ -85,6 +86,7 @@ public class JavaBasics{
     }
 
     // Understanding type conversion in java
+    @SuppressWarnings("unused")
     public static void typeconversion_and_casting(){
     
         // implicit casting (happens automaticlly)
@@ -160,5 +162,61 @@ public class JavaBasics{
         }
     }
 
-    
+    // ternary operator example
+    public static void ternary(){
+        int num;
+        int n1 = 3;
+        int n2 = 5;
+
+        num = n1<n2 ? n1 : n2 ;
+
+        System.out.println(num);
+    }
+
+    // print no.s 1 to 10
+    public static void printnum(){
+        Scanner sc = new Scanner(System.in);
+        int i,n;
+        
+        System.out.println("Enter until how many numbers you want to print :- ");
+        n = sc.nextInt();
+
+        sc.close();
+
+        System.out.println("\nNumbers :- ");
+        for(i=1;i<=n;i++){
+            System.out.println(i);
+        }
+    }
+
+    // check if number is prime or not 
+    public static void primeornot(){
+        int i;
+        boolean isPrime = true;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a number you want to check whether it's prime or not :- ");
+        int num = sc.nextInt();
+
+        sc.close();
+
+        if(num>0 && num!=1){
+            for(i = 2;i<=num-1;i++){
+                if(num%i==0){
+                    isPrime = false;
+                }
+            }
+        }
+        else{
+            System.out.println("Number is Prime!");
+        }
+
+        if(isPrime==true){
+            System.out.println("Number is Prime!");
+        }
+        else{
+            System.out.println("Number is not prime!");
+        }
+    }
 }
