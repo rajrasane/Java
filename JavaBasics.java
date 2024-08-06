@@ -2,7 +2,17 @@ import java.util.* ;
 
 public class JavaBasics{
     public static void main(String[] args) {
-        primeornot();
+        // primeornot();
+        // add(100, 110);              // here a and b are called as arguments or actual parameters
+        // swap();
+        // fact(5);
+        // binomialfact(5, 2);
+        // System.out.println("Addition of two numbers is " + addn(2, 4));
+        // System.out.println("Addition of three numbers is " + addn(2, 4 , 8));
+        // System.out.println(sub(2,1));
+        // System.out.println(sub(3.1f,2.1f));
+        // System.out.println(checkprime(4));
+        primeinrange(20);
     }
 
     // Showing output in JAVA
@@ -217,6 +227,83 @@ public class JavaBasics{
         }
         else{
             System.out.println("Number is not prime!");
+        }
+    }
+
+    // using function with parameters 
+    public static void add(int a,int b){            // here a and b are called as parameter or formal parameters
+        int sum;
+        sum = a + b;
+        System.out.print("Sum of number :" + a + " and " + b + " is => " + sum);
+    }
+
+    // call by value example                    // java always calls by Value
+    public static void swap(){
+        int a = 5;
+        int b = 10;
+
+        int temp;
+
+        temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("value of a :- " + a);
+        System.out.println("value of b :- " + b);
+    }
+
+    // program to calculate the factorial of number n 
+    public static int fact(int n){
+        int fact = 1;
+
+        for(int i= 1;i<=n;i++){
+            fact = fact * i;
+        }
+
+        return fact;
+    }
+
+    // program to find binomial coeefficient nCr = n!/r!*(n-r)!
+    public static void binomialfact(int n,int r){
+        int bm = fact(n)/(fact(r)*fact(n-r));
+        
+        System.out.println("Binomial Factorial of " + n + " and " + r + " :- " + bm);
+    }
+
+    // Function overlaoding example         i.e function with same name but different no. of parameters
+    public static int addn(int a,int b){
+        return a + b;
+    }
+
+    public static int addn(int a,int b,int c){
+        return a + b + c;
+    }
+
+    // function overlaoding using datatypes
+    public static int sub(int a,int b){
+        return a - b;
+    }
+
+    public static float sub(float a,float b){
+        return a - b;
+    }
+
+    // checking prime using more opimized way
+    public static boolean checkprime(int n){
+        for(int i=2;i<=Math.sqrt(n);i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // displaying all prime no.s int the given range
+    public static void primeinrange(int n){
+        for(int i=2;i<=n;i++){
+            if(checkprime(i)){
+                System.out.print(i + " ");
+            }
         }
     }
 }
