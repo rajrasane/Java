@@ -12,6 +12,10 @@ public class JavaArrays {
         // marks[0] = 3;
         // marks[1] = 4;
         // marks[2] = 5;
+
+        int prices[] = {7,1,5,3,6,4};
+
+        System.out.println(maxProfit(prices)) ;
         
     }
 
@@ -284,5 +288,52 @@ public class JavaArrays {
             }
     
             return trappedWater;
+        }
+
+
+        // You are given an array prices where prices[i] is the price of a given stock on the ith day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock. Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+
+        public static int maxProfit(int[] prices) {
+
+            // int max[] = new int[prices.length];
+            // int maxprofit = 0;
+            // int currdiff;
+    
+            // for(int i=0;i<prices.length;i++){
+            //     max[i] = 0 ;
+            //     for(int j=i+1;j<prices.length;j++){
+            //         currdiff = prices[j]-prices[i];
+            //         if(max[i]<currdiff){
+            //             max[i] = currdiff;
+            //         }
+            //     }
+            // }
+            // for(int i=0;i<max.length;i++){
+            //     if(maxprofit<max[i]){
+            //         maxprofit = max[i];
+            //     }
+            // }
+    
+            // if(maxprofit>0){
+            //     return maxprofit;
+            // }
+            // else{
+            //     return 0;
+            // }
+            
+
+            // This method has the best time complexity i.e     O(n) .
+            int buyprice = Integer.MAX_VALUE;
+            int maxprofit = 0;
+
+            for(int i=0;i<prices.length;i++){
+                if(buyprice<prices[i]){
+                    int profit = prices[i] - buyprice;
+                    maxprofit = Math.max(maxprofit, profit);
+                }else{
+                    buyprice = prices[i];
+                }
+            }
+            return maxprofit;
         }
 }
