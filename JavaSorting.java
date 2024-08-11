@@ -1,11 +1,8 @@
-import java.util.Scanner;
-
 public class JavaSorting {
     public static void main(String[] args) {
         bubblesort();
     }
     public static void bubblesort(){
-        Scanner sc = new Scanner(System.in);
         int a[] = {5,4,1,3,2};
 
         System.out.println("Array elements before sorting :- ");
