@@ -1,7 +1,12 @@
+import java.util.Arrays;
+import java.util.Collections;
+
 public class JavaSorting {
     public static void main(String[] args) {
-        insertionsort();
+        inbuildsortasc();
     }
+
+    // bubble sort
     public static void bubblesort(){
         int a[] = {5,4,1,3,2};
 
@@ -41,6 +46,7 @@ public class JavaSorting {
         }
     }
 
+    // selection sort
     public static void selectionsort(){
         int a[] = {3,2,4,7,5,1};
         int n = a.length;
@@ -85,6 +91,7 @@ public class JavaSorting {
         }
     }
 
+    // insertion sort
     public static void insertionsort(){
         int arr[] = {7,6,2,4,5};
         int n = arr.length;
@@ -109,4 +116,34 @@ public class JavaSorting {
         }
     }
 
+    // inbluid sort         -- This method has the time complexity of O(n logn)
+    public static void inbuildsortasc(){
+        int arr[] = {6,4,7,3,5};
+        int arr2[] = {5,3,4,2,1};
+        int n = arr.length;
+
+        System.out.println("Arrays before sorting :- ");
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i] + " ");
+        }
+
+        Arrays.sort(arr);
+
+        System.out.println("\nArray after sorting :- ");
+        for(int i=0;i<n;i++){
+            System.out.print(arr[i] + " ");
+        }
+
+        System.out.println("\nArray 2 before sorting :- ");
+        for(int i=0;i<n;i++){
+            System.out.print(arr2[i] + " ");
+        }
+
+        Arrays.sort(arr2,0,3);
+
+        System.out.println("\nArray 2 after sorting with mentioning of a particular start index + end index");
+        for(int i=0;i<n;i++){
+            System.out.print(arr2[i]  +  " ");
+        }
+    }
 }
