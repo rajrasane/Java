@@ -1,14 +1,18 @@
 class areaofrect{
-	int length;
-	int breadth;
-	int area(int l,int b){
+	double length;
+	double breadth;
+	void accept(double l,double b){
 		length = l;
 		breadth = b;
+	}
+	double area(){
 		return length * breadth;
 	}
+	
 	public static void main(String arg[]){
 		areaofrect ar = new areaofrect();
-		int a = ar.area(4,5);
+		ar.accept(4.3,5.4);
+		double a = ar.area();
 		System.out.println("Area of rectangle is = " + a);
 	}
 }
