@@ -49,5 +49,7 @@ public class arraysum
 		}
 
 		System.out.println();
+
+		sc.close();
 	}
 }

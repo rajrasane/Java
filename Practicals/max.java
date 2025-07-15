@@ -18,5 +18,7 @@ class max
 			large = b;	
 		}
 		System.out.println("Large No :- " + large);
+
+		sc.close();
 	}
 }

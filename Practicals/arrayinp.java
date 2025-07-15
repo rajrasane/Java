@@ -23,5 +23,7 @@ public class arrayinp
 		}
 
 		System.out.println();
+		
+		sc.close();
 	}
 }

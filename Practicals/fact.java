@@ -14,5 +14,6 @@ class fact
 		
 		System.out.println("factorial of " + n + " is " + facto);
 
+		sc.close();
 	}
 }

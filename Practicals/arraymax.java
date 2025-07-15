@@ -34,5 +34,7 @@ public class arraymax
 		System.out.print(large);
 
 		System.out.println();
+
+		sc.close();
 	}
 }

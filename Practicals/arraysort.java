@@ -45,5 +45,7 @@ public class arraysort
 		
 
 		System.out.println();
+
+		sc.close();
 	}
 }

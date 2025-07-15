@@ -8,5 +8,7 @@ class inputadd
 		int b = sc.nextInt();
 		int sum = a+b;
 		System.out.println("Addition of entered two numbers is :- " + sum);
+
+		sc.close();
 	}
 }

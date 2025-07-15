@@ -15,5 +15,6 @@ class posneg
 			System.out.println("No is negative");	
 		}
 		
+		sc.close();
 	}
 }

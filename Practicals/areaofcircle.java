@@ -10,5 +10,6 @@ class areaofcircle
 		
 		System.out.println("Area of Circle with radius " + r + " is " + area);
 
+		sc.close();
 	}
 }

@@ -18,5 +18,7 @@ class min
 			mini = b;	
 		}
 		System.out.println("Small No :- " + mini);
+
+		sc.close();
 	}
 }

@@ -13,5 +13,7 @@ class xraisetoy
 			pow = x*pow;
 		}
 		System.out.println(x + " raise to " + y + " = " + pow);
+
+		sc.close();
 	}
 }

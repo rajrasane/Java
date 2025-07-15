@@ -32,5 +32,7 @@ public class arraysum2
 		
 		System.out.println("\n\nSum of these array is " + sum + "\n\n");
 
+		sc.close();
+
 	}
 }
