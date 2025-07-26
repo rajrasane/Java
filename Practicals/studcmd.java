@@ -40,7 +40,7 @@ class studcmd {
             students[i] = new studcmd(name, rollno, percentage);
         }
 
-        sortStudent(students);
+        studcmd.sortStudent(students);
 
         System.out.println("\nSorted Student Records:");
         for (int i = 0; i < students.length; i++) {
