@@ -25,11 +25,10 @@ class empcmd {
     }
 
     public static void main(String[] args) {
-        empcmd e1 = new empcmd(1, "Alice", "HR", 50000);
+        empcmd e1 = new empcmd(1, "Raj", "HR", 50000);
         e1.display();
 
-        empcmd e2 = new empcmd(2, "Bob", "IT", 60000);
-        // count++;
+        empcmd e2 = new empcmd(2, "Om", "IT", 60000);
         e2.display();
     }
 }
