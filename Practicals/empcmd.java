@@ -6,8 +6,8 @@ class empcmd {
 
     empcmd() {
         this.id = 0;
-        this.name = "N/A";
-        this.deptname = "N/A";
+        this.name = "";
+        this.deptname = "";
         this.salary = 0.0;
     }
 
@@ -16,6 +16,7 @@ class empcmd {
         this.name = name;
         this.deptname = deptname;
         this.salary = salary;
+        count++;
     }
 
     void display() {
@@ -25,11 +26,10 @@ class empcmd {
 
     public static void main(String[] args) {
         empcmd e1 = new empcmd(1, "Alice", "HR", 50000);
-        count++;
         e1.display();
 
         empcmd e2 = new empcmd(2, "Bob", "IT", 60000);
-        count++;
+        // count++;
         e2.display();
     }
 }
