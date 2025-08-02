@@ -20,7 +20,7 @@ class empcmd {
 
     void display() {
         System.out.println("ID: " + id + ", Name: " + name + ", Dept: " + deptname + ", Salary: " + salary);
-        System.out.println("Count : " + count);
+        System.out.println("Object Created : " + count);
     }
 
     public static void main(String[] args) {
